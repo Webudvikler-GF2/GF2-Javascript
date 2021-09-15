@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Image Array</title>
+</head>
+<body>
+
+    <div id="wrapper"></div>
+    
+    <script>
+        //Initialiserer array med filnavn
+        const arrImages = [
+            ["landscape-1.jpg", "Landskab"],
+            ["landscape-2.jpg", "Eng med marker"],
+            ["landscape-3.jpg", "Eng med marker"],
+            ["landscape-4.jpg", "Eng med marker"],
+            ["landscape-5.jpg", "Eng med marker"],
+            ["aband-places-1.jpg", "Eng med marker"]
+        ];
+
+        console.log(arrImages);
+
+        //Initialiserer variabel til html output
+        let html = "";
+
+        //Looper aarray og tilføjer html til html variabel
+        arrImages.forEach(function(value) {
+            console.log(value);
+            html += `<img width="100px" src="assets/images/slider/${value[0]}" title="${value[1]}">`;
+        });
+
+        //Indsætter html i wrapper
+        wrapper.insertAdjacentHTML("afterbegin", html);
+    </script>
+</body>
+</html>

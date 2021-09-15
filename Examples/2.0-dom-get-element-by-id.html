@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Get Element By Id</title>
+</head>
+<body>
+
+    <input type="text" name="firstname" id="firstname" class="form-input textfield" value="Peter">
+
+    <script>
+        //Tildeler element med id firstname til variabel input
+        const input = document.getElementById('firstname');
+
+        //Udskriver som html tag i konsollen
+        console.log(input);
+
+        //Udskriver elementets type
+        console.dir(input.type);
+
+        //Udskriver elementets id
+        console.dir(input.id);
+
+        //Udskriver elementets værdi
+        console.dir(input.value);
+
+        //Udskriver elementets liste af klasser
+        console.dir(input.classList);
+    </script>
+</body>
+</html>

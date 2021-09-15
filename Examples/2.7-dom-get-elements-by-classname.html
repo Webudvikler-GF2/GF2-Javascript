@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Get Element By Classname</title>
+</head>
+<body>
+    
+    <ul>
+        <li class="list">Peter</li>
+        <li class="list">Lise</li>
+        <li class="list">Jens</li>
+        <li class="list">Susanne</li>
+        <li class="list">Ole</li>
+        <li class="list">Hanne</li>
+    </ul>
+
+    <div id="list-wrapper"></div>
+
+    <script>
+        //Henter alle elementer med klassen 'list' ind i variablen myButtons
+        const myList = document.getElementsByClassName('list');
+
+        //Udskriver myList med en console.dir. I konsollen ligger 
+        //de enkelte punkter ligger fordelt på nogle tal. (0,1,2,3,4...) 
+        //console.dir(myList[3]);
+
+        
+        //Løber listen igennem med et for loop og tildeler hver
+        //enkelte punkt til variablen list
+        let html = "<section>\n";
+
+        for(let list of myList) {
+            //Udskriver hver enkelte punkt med en console.dir()
+            html += `<div>${list.innerHTML}</div>\n`;
+            //console.dir(list);
+        } 
+        html += "</section>\n";
+
+        document.getElementById('list-wrapper').innerHTML = html;
+
+        console.log(html);
+    </script>
+</body>
+</html>

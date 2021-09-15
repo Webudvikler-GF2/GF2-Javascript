@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Toggle Class</title>
+    <style>
+        .element {
+            height: 100px;
+            width: 100px;
+            margin-bottom: 20px;
+            background-color: rgb(255, 0, 0);
+            transition: all 1s ease;
+            opacity: 0.2;
+        }
+
+        .element-active {
+            width: 100%;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="class-element" class="element"></div>
+    <button>Toggle Class</button>
+
+    <script>
+        /**
+         * Script til at skifte et elements css klasse med.
+         * Scriptet bruger toggle funktionen som slår 
+         * klassen element-active til og fra på et div element
+         * Functionen bliver kaldt af et onclcik på en 
+         * button
+         */
+
+        //Sætter vars til elementer
+        const button = document.querySelector('body button');
+        const element = document.querySelector('.element');
+
+        //Sætter click event på knap
+        button.onclick = function() {
+            //Toggler klasse på div element
+            element.classList.toggle('element-active');
+        }    
+    </script>
+</body>
+</html>
